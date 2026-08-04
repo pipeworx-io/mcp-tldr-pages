@@ -1,17 +1,22 @@
-# mcp-tldr-pages
+# @pipeworx/tldr-pages
 
-tldr-pages MCP — fetched from the canonical github repo.
+[tldr-pages](https://tldr.sh) MCP — community maintained simplified man pages. Keyless. Cached 24h in-pack.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `page` | Render tldr page for a command. |
-| `commands` | List commands. |
-| `platforms` | List supported platforms. |
-| `search` | Substring search across page titles. |
+- `page(command, platform?, language?)` — render tldr page for a command
+- `commands(platform?, language?)` — list commands available for a platform
+- `platforms()` — list supported platforms
+- `search(query, platform?, language?, limit?)` — substring search across page titles
+
+`platform`: `common` (default) | `linux` | `osx` | `windows` | `android` | `sunos` | `freebsd`.
+`language`: ISO 639-1, default `en`.
+
+## Data source
+
+`https://raw.githubusercontent.com/tldr-pages/tldr/main/pages...`
 
 ## Quick Start
 
@@ -27,7 +32,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +56,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
