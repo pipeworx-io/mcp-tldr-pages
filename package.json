@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-tldr-pages",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "tldr-pages MCP — fetched from the canonical github repo.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-52d0e3243e7877522821f2d5cf90a569c1f19983d6453743721cf093b5f09ab7",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-58cdda895836433eb6a48e7355fec9ec326b52073b053ffaa77ee2a3aacca740",
+    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
   }
 }
