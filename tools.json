@@ -1,0 +1,72 @@
+[
+  {
+    "name": "page",
+    "description": "Render tldr page for a command.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string",
+          "description": "common (default) | linux | osx | windows | android | sunos | freebsd"
+        },
+        "language": {
+          "type": "string",
+          "description": "ISO 639-1, default \"en\"."
+        }
+      },
+      "required": [
+        "command"
+      ]
+    }
+  },
+  {
+    "name": "commands",
+    "description": "List every command-line utility that has a tldr-pages cheatsheet, filtered to one platform (common, linux, osx, windows, android, sunos, freebsd) and one ISO 639-1 language, read from the tldr-pages index published on GitHub. Returns the command names plus a count. Answers which shell commands tldr documents for a given platform, before fetching a page.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  {
+    "name": "platforms",
+    "description": "List the platform keys present across the tldr-pages cheatsheet collection (common, linux, osx, windows, android, sunos, freebsd), derived from the tldr-pages index published on GitHub. Returns the sorted set of platform values that the page, commands, and search tools in this pack accept. Answers which platform value to pass when looking up a tldr command cheatsheet.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "search",
+    "description": "Substring search across page titles.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  }
+]

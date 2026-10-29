@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-tldr-pages",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "tldr-pages MCP — fetched from the canonical github repo.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-tldr-pages": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "tldr-pages"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-tldr-pages.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/tldr-pages",
   "pipeworx": {
-    "sourceHash": "v1-58cdda895836433eb6a48e7355fec9ec326b52073b053ffaa77ee2a3aacca740",
-    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
+    "mode": "gateway",
+    "slug": "tldr-pages",
+    "gatewaySlug": "tldr-pages",
+    "sourceHash": "v1-7ae651cddb358f26df0ce33f88112b0b7c9456f1fc579d55afa4ae5f309bbcb5",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }
